@@ -125,12 +125,12 @@ def apply_gost_styles(doc: Document, target_pages="ALL"):
                     block.paragraph_format.first_line_indent = Cm(0)
                     block.paragraph_format.line_spacing = 1.0
                     block.paragraph_format.keep_with_next = True
-                elif text.startswith("Рисунок"):
+                elif "Рисунок" in text and any('SEQ' in (n.text or '') for r in block.runs for n in r._element.xpath('.//w:instrText')):
                     block.alignment = WD_ALIGN_PARAGRAPH.CENTER
                     block.paragraph_format.first_line_indent = Cm(0)
                     block.paragraph_format.space_after = Pt(6)
                     block.paragraph_format.line_spacing = 1.0
-                elif text.startswith("Таблица"):
+                elif "Таблица" in text and any('SEQ' in (n.text or '') for r in block.runs for n in r._element.xpath('.//w:instrText')):
                     block.alignment = WD_ALIGN_PARAGRAPH.LEFT
                     block.paragraph_format.first_line_indent = Cm(0)
                     block.paragraph_format.space_after = Pt(0)
