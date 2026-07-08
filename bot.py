@@ -15,7 +15,7 @@ from docx.oxml.ns import qn
 from telegram import Update, ReplyKeyboardMarkup, ReplyKeyboardRemove
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes, ConversationHandler
 
-TOKEN = "8486243710:AAGKf9KGTc1Jz5qtVoZ6ldYZfZ-x3FFddOQ"
+TOKEN = os.getenv("TELEGRAM_TOKEN")
 
 WAITING_FOR_PAGES = 1
 
