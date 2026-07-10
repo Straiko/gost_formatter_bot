@@ -1,0 +1,28 @@
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Logs
+*.log
+crash.log
+
+# Local test files
+*.docx
+test_*.py
+run_tests.py
+inspect_doc.py
+format_local.py
+doc_xml_dump.xml
+test_img.png
+
+# Env files
+.env
+
+# OS
+.DS_Store
