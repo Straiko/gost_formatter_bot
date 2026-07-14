@@ -4,7 +4,7 @@ from pathlib import Path
 
 from docx import Document
 
-from bot import apply_gost_styles
+from docx_formatter import apply_gost_styles
 
 
 def validate_paths(input_path: Path) -> Path:
